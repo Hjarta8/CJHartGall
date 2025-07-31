@@ -27,7 +27,7 @@ header h1 {
 }
 
 .art-image {
-  flex: 1;
+  flex: 1.5;
   position: relative;
 }
 
@@ -35,7 +35,7 @@ header h1 {
   width: 200%;
   border-radius: 10px;
   box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
-  max-width: 500px;
+  max-width: 800px;
 }
 
 .art-text {
