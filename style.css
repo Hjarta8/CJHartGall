@@ -22,21 +22,28 @@ header h1 {
   gap: 40px;
   padding: 100px 40px;
   border-bottom: 1px solid #333;
-  min-height: 200vh; /* Give enough scroll space */
+  min-height: 200vh;
   position: relative;
+  align-items: center; /* Ensures content inside is centered */
 }
 
 .art-image {
   flex: 1.5;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* force height for pinning context */
 }
 
 .art-image img {
-  width: 200%;
+  width: 100%;
+  max-width: 800px;
+  height: auto;
   border-radius: 10px;
   box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
-  max-width: 800px;
 }
+
 
 .art-text {
   flex: 1;
