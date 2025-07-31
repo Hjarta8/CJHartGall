@@ -1,0 +1,36 @@
+body {
+  margin: 0;
+  background-color: #111;
+  color: #eee;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+header {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #222;
+}
+
+header h1 {
+  margin-bottom: 10px;
+}
+
+.artwork {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  padding: 60px 40px;
+  border-bottom: 1px solid #333;
+}
+
+.art-image img {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+  width: 500px;
+}
+
+.art-text {
+  max-width: 600px;
+}
