@@ -5,7 +5,11 @@
   <title>Art Gallery</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+  <!-- GSAP and ScrollTrigger -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/ScrollTrigger.min.js"></script>
 </head>
+
 <body>
   <header>
     <h1>My Art Gallery</h1>
@@ -16,21 +20,12 @@
     <div class="art-image">
       <img src="assets/game.jpg" alt="Artwork 1">
     </div>
-    <div class="art-text">
-      <h2>Artwork Title</h2>
-      <p><strong>Artist / Location:</strong> Example Name, Year, Country</p>
-      <p>
+    <div class="art-text" data-desc="descriptions/desc1.html">
+  <h2>Artwork Title</h2>
+  <p><strong>Artist / Location:</strong> Example Name, Year, Country</p>
+  <div class="desc-placeholder">Loading description...</div>
+</div>
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vel quam quam. Etiam sollicitudin felis a luctus cursus. Pellentesque gravida, justo sed vestibulum bibendum, arcu dui volutpat lectus, auctor ullamcorper nisi elit dictum lacus. Pellentesque scelerisque blandit mi vitae fermentum. Quisque placerat neque ligula, quis feugiat est tincidunt in. Sed quis vehicula lorem, non convallis tortor. Ut maximus sit amet lacus finibus maximus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vivamus luctus egestas leo vitae rhoncus. Phasellus aliquam eget turpis ut maximus. Morbi ut fermentum lacus. Integer semper mauris ut mi laoreet, sed imperdiet elit pellentesque.
-
-Phasellus ultrices varius tellus, vel placerat erat auctor elementum. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales lectus molestie tempus commodo. Aenean pharetra diam at porta placerat. Nam viverra ante sit amet ipsum vehicula vehicula. Phasellus consequat sem dignissim urna consectetur dapibus. Sed finibus efficitur massa a rutrum. Etiam malesuada mauris id ornare porta. Sed molestie orci arcu, eget maximus est posuere a. Proin vulputate semper fringilla. Morbi molestie mi sapien, nec pellentesque nunc lobortis quis. Sed tempor, erat sed aliquet mollis, lacus mi efficitur ligula, rhoncus rutrum lacus urna id nunc. Morbi pulvinar non augue nec viverra.
-
-Nunc pharetra blandit fermentum. Aenean ultrices mauris sed eros euismod, nec tempus risus ullamcorper. Donec congue ligula a leo suscipit, et tincidunt nibh consequat. Maecenas auctor odio nibh, in eleifend lorem tincidunt sit amet. Etiam a ex at mauris tincidunt iaculis vitae sed felis. Donec orci massa, fringilla ac leo at, dictum bibendum ex. Vestibulum posuere nisi et mi interdum, nec eleifend nibh imperdiet. Donec eget viverra sem, vitae sagittis ante. Maecenas placerat aliquam arcu, nec malesuada magna volutpat id. Mauris a facilisis urna. Mauris non urna eget ex condimentum dignissim. Nam consequat nibh ac diam condimentum, in lacinia ligula mollis.
-
-Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Cras eu dui metus. Nunc eget lorem enim. Sed eu interdum mi. Ut aliquet lectus nec turpis imperdiet, et bibendum lacus placerat. In hac habitasse platea dictumst. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Quisque lacinia diam quis tortor molestie, quis congue nunc bibendum. Praesent iaculis rutrum eros, in tincidunt ligula tempus in. Quisque hendrerit nulla at lorem consequat pharetra.
-
-Mauris finibus erat ex. Pellentesque sed odio quis diam facilisis pellentesque id at felis. Nullam at orci sagittis, tincidunt velit eu, ultrices leo. In eu magna sed arcu tempor semper. Ut fermentum ex a nisi placerat, a mollis mauris scelerisque. Maecenas sit amet massa sollicitudin, dapibus massa at, pulvinar diam. Cras sed nisi interdum, tempus sem eget, dignissim diam. Maecenas tincidunt, felis eu egestas rhoncus, dui dui mattis velit, vitae vestibulum mi felis ut turpis. Ut et imperdiet tellus. Maecenas sit amet tincidunt dolor, ac dictum nulla. Cras massa arcu, varius sed metus vitae, vehicula eleifend metus. Duis imperdiet vulputate magna sit amet tempor. Morbi gravida ipsum eu egestas pharetra. </p>
-    </div>
   </section>
 
   <section class="artwork">

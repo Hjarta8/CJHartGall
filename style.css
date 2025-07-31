@@ -20,17 +20,28 @@ header h1 {
   display: flex;
   flex-direction: row;
   gap: 40px;
-  padding: 60px 40px;
+  padding: 100px 40px;
   border-bottom: 1px solid #333;
+  min-height: 200vh; /* Give enough scroll space */
+  position: relative;
+}
+
+.art-image {
+  flex: 1;
+  position: relative;
 }
 
 .art-image img {
-  max-width: 100%;
+  width: 100%;
   border-radius: 10px;
   box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
-  width: 500px;
+  max-width: 500px;
 }
 
 .art-text {
+  flex: 1;
+  font-size: 1.1rem;
   max-width: 600px;
+  line-height: 1.6;
 }
+
