@@ -32,7 +32,7 @@ header h1 {
 }
 
 .art-image img {
-  width: 100%;
+  width: 200%;
   border-radius: 10px;
   box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
   max-width: 500px;
