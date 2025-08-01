@@ -25,9 +25,7 @@ header h1 {
   min-height: 0vh;
   position: relative;
     
-  opacity: 0;
-  transform: translateY(50px); /* optional: slide up on reveal */
-  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+ 
 }
 
 .art-image {
@@ -37,6 +35,7 @@ header h1 {
   align-items: center;          /* Vertically center the image */
   justify-content: flex-start;  /* Left-align inside the div */
   overflow: hidden;
+  
 }
 
 .art-image img {
@@ -44,6 +43,9 @@ header h1 {
   width: auto;
   border-radius: 10px;
   box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+
+  opacity: 0;
+  transform: translateY(50px);
 }
 
 
@@ -53,5 +55,8 @@ header h1 {
   font-size: 1.1rem;
   max-width: 600px;
   line-height: 1.6;
+
+  opacity: 0;
+  transform: translateY(50px);
 }
 

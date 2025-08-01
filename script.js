@@ -44,20 +44,36 @@ document.querySelectorAll(".artwork").forEach((section) => {
       });
   }
 
-    // Fade in artwork sections
-    gsap.utils.toArray(".artwork").forEach((section) => {
-    gsap.to(section, {
-        opacity: 1,
-        y: 0,
-        duration: 1,
-        ease: "power2.out",
-        scrollTrigger: {
-        trigger: section,
-        start: "top 80%", // when top of section hits 80% down viewport
-        toggleActions: "play none none none"
-        }
-    });
-    });
+    // Animate image fade + slide
+gsap.utils.toArray(".art-image img").forEach((img) => {
+  gsap.to(img, {
+    opacity: 1,
+    y: 0,
+    duration: 1,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: img,
+      start: "top 85%",
+      toggleActions: "play none none none"
+    }
+  });
+});
+
+// Animate text fade + slide
+gsap.utils.toArray(".art-text").forEach((text) => {
+  gsap.to(text, {
+    opacity: 1,
+    y: 0,
+    duration: 1,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: text,
+      start: "top 85%",
+      toggleActions: "play none none none"
+    }
+  });
+});
+
 
 
 });
