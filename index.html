@@ -42,19 +42,10 @@
   </section>
 
   <footer style="text-align: center; padding: 20px; color: #777;">
-  Site loaded at: <span id="last-update-time"></span>
+  Site version: <span id="site-version">
+    v0.1
+</span>
 </footer>
-
-<script>
-  const date = new Date();
-  const formattedTime = date.toLocaleTimeString("en-US", {
-    hour: "2-digit",
-    minute: "2-digit",
-    second: "2-digit"
-  });
-
-  document.getElementById("last-update-time").textContent = formattedTime;
-</script>
 
 
 
