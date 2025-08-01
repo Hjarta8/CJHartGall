@@ -24,25 +24,23 @@ header h1 {
   border-bottom: 1px solid #333;
   min-height: 200vh;
   position: relative;
-  align-items: center; /* Ensures content inside is centered */
 }
 
 .art-image {
   flex: 1.5;
-  position: relative;
+  height: 100vh;                /* Full screen height for pin */
   display: flex;
-  align-items: top;
-  justify-content: top;
-  height: 100vh; /* force height for pinning context */
+  align-items: center;          /* Vertically center the image */
+  justify-content: flex-start;  /* Left-align inside the div */
 }
 
 .art-image img {
-  width: 100%;
-  max-width: 800px;
-  height: auto;
+  max-height: 80vh;             /* Scale to fit screen height */
+  width: auto;
   border-radius: 10px;
   box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
 }
+
 
 
 .art-text {
