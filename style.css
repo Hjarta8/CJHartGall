@@ -22,7 +22,7 @@ header h1 {
   gap: 40px;
   padding: 100px 0px;
   border-bottom: 1px solid #333;
-  min-height: 200vh;
+  min-height: 0vh;
   position: relative;
 }
 
