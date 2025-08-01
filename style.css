@@ -32,6 +32,7 @@ header h1 {
   display: flex;
   align-items: center;          /* Vertically center the image */
   justify-content: flex-start;  /* Left-align inside the div */
+  overflow: hidden;
 }
 
 .art-image img {

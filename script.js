@@ -2,20 +2,32 @@ gsap.registerPlugin(ScrollTrigger);
 
 document.querySelectorAll(".artwork").forEach((section) => {
   const imageWrapper = section.querySelector(".art-image");
+  const image = imageWrapper.querySelector("img");
 
+  // Pin the image wrapper
   ScrollTrigger.create({
-    trigger: imageWrapper,        // ✅ use the image container itself
-    start: "top top",             // ✅ when image hits top of viewport
-    endTrigger: section,          // optional: use section to define end
-    end: "bottom bottom",         // pin until section ends
+    trigger: imageWrapper,
+    start: "top top",
+    end: "+=1000",            // stays pinned for 1000px of scroll
     pin: imageWrapper,
     pinSpacing: true,
     scrub: true
   });
 
+  // Animate the image inside the pinned wrapper
+  gsap.to(image, {
+    y: -100,                 // move image up as you scroll down
+    ease: "none",
+    scrollTrigger: {
+      trigger: imageWrapper,
+      start: "top top",
+      endTrigger: section,          // optional: use section to define end
+      end: "bottom bottom",         // match pin duration
+      scrub: true
+    }
+  });
 
-
-  // 💡 Description loading
+  // Load external description if needed
   const textBlock = section.querySelector(".art-text");
   const descPath = textBlock?.dataset.desc;
   const descTarget = textBlock?.querySelector(".desc-placeholder");
