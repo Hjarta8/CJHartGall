@@ -9,8 +9,8 @@ document.querySelectorAll(".artwork").forEach((section) => {
     ease: "none",
     scrollTrigger: {
       trigger: section,
-      start: "top center",
-      end: "bottom center",
+      start: "top top",
+      end: "bottom bottom",
       scrub: true,
       pin: section.querySelector(".art-image"),
       pinSpacing: true,
