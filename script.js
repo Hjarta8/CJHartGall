@@ -8,7 +8,7 @@ document.querySelectorAll(".artwork").forEach((section) => {
   ScrollTrigger.create({
     trigger: imageWrapper,
     start: "top top",
-    end: "+=1000", // stays pinned for 1000px
+    end: "bottom bottom", // stays pinned for 1000px
     pin: imageWrapper,
     pinSpacing: true,
     scrub: true
@@ -23,7 +23,7 @@ document.querySelectorAll(".artwork").forEach((section) => {
       scrollTrigger: {
         trigger: imageWrapper,
         start: "top top",
-        end: "+=1000", // same as pin duration
+        end: "bottom bottom", // same as pin duration
         scrub: true
       }
     }
