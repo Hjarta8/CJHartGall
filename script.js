@@ -5,7 +5,7 @@ document.querySelectorAll(".artwork").forEach((section) => {
 
   ScrollTrigger.create({
     trigger: imageWrapper,        // ✅ use the image container itself
-    start: "top 20%",             // ✅ when image hits top of viewport
+    start: "top top",             // ✅ when image hits top of viewport
     endTrigger: section,          // optional: use section to define end
     end: "bottom center",         // pin until section ends
     pin: imageWrapper,
