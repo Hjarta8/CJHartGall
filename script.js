@@ -43,4 +43,21 @@ document.querySelectorAll(".artwork").forEach((section) => {
         console.error("Failed to load:", descPath, err);
       });
   }
+
+    // Fade in artwork sections
+    gsap.utils.toArray(".artwork").forEach((section) => {
+    gsap.to(section, {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        ease: "power2.out",
+        scrollTrigger: {
+        trigger: section,
+        start: "top 80%", // when top of section hits 80% down viewport
+        toggleActions: "play none none none"
+        }
+    });
+    });
+
+
 });
