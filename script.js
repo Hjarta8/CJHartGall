@@ -1,17 +1,22 @@
 gsap.registerPlugin(ScrollTrigger);
 
 document.querySelectorAll(".artwork").forEach((section) => {
-  const imageWrapper = section.querySelector(".art-image");
+  const image = section.querySelector(".art-image img");
 
-  ScrollTrigger.create({
-    trigger: imageWrapper,        // ✅ use the image container itself
-    start: "top top",             // ✅ when image hits top of viewport
-    endTrigger: section,          // optional: use section to define end
-    end: "bottom bottom",         // pin until section ends
-    pin: imageWrapper,
-    pinSpacing: true,
-    scrub: true
+  // Create an animation to scrub
+  gsap.to(image, {
+    y: -100, // move up 100px over scroll
+    ease: "none",
+    scrollTrigger: {
+      trigger: section,
+      start: "top center",
+      end: "bottom center",
+      scrub: true,
+      pin: section.querySelector(".art-image"),
+      pinSpacing: true,
+    },
   });
+
 
 
 
