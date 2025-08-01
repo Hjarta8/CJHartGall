@@ -8,29 +8,56 @@ document.querySelectorAll(".artwork").forEach((section) => {
   ScrollTrigger.create({
     trigger: imageWrapper,
     start: "top top",
-    end: "+=1000",            // stays pinned for 1000px of scroll
+    end: "+=1000", // stays pinned for 1000px
     pin: imageWrapper,
     pinSpacing: true,
     scrub: true
   });
 
-  // Animate the image inside the pinned wrapper
+  // Animate image on scroll — gradual drift up
+  gsap.fromTo(image, 
+    { y: 0 }, 
+    {
+      y: -100,
+      ease: "none",
+      scrollTrigger: {
+        trigger: imageWrapper,
+        start: "top top",
+        end: "+=1000", // same as pin duration
+        scrub: true
+      }
+    }
+  );
+
+  // Fade-in image (opacity only!)
   gsap.to(image, {
-    y: -100,                 // move image up as you scroll down
-    ease: "none",
+    opacity: 1,
+    duration: 1,
+    ease: "power2.out",
     scrollTrigger: {
       trigger: imageWrapper,
-      start: "top top",
-      endTrigger: section,          // optional: use section to define end
-      end: "bottom bottom",         // match pin duration
-      scrub: true
+      start: "top 85%",
+      toggleActions: "play none none none"
+    }
+  });
+
+  // Fade-in text
+  const text = section.querySelector(".art-text");
+  gsap.to(text, {
+    opacity: 1,
+    y: 0,
+    duration: 1,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: text,
+      start: "top 85%",
+      toggleActions: "play none none none"
     }
   });
 
   // Load external description if needed
-  const textBlock = section.querySelector(".art-text");
-  const descPath = textBlock?.dataset.desc;
-  const descTarget = textBlock?.querySelector(".desc-placeholder");
+  const descPath = text?.dataset.desc;
+  const descTarget = text?.querySelector(".desc-placeholder");
 
   if (descPath && descTarget) {
     fetch(descPath)
@@ -43,37 +70,4 @@ document.querySelectorAll(".artwork").forEach((section) => {
         console.error("Failed to load:", descPath, err);
       });
   }
-
-    // Animate image fade + slide
-gsap.utils.toArray(".art-image img").forEach((img) => {
-  gsap.to(img, {
-    opacity: 1,
-    y: 0,
-    duration: 1,
-    ease: "power2.out",
-    scrollTrigger: {
-      trigger: img,
-      start: "top 85%",
-      toggleActions: "play none none none"
-    }
-  });
-});
-
-// Animate text fade + slide
-gsap.utils.toArray(".art-text").forEach((text) => {
-  gsap.to(text, {
-    opacity: 1,
-    y: 0,
-    duration: 1,
-    ease: "power2.out",
-    scrollTrigger: {
-      trigger: text,
-      start: "top 85%",
-      toggleActions: "play none none none"
-    }
-  });
-});
-
-
-
 });
