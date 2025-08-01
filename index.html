@@ -41,6 +41,23 @@
     </div>
   </section>
 
+  <footer style="text-align: center; padding: 20px; color: #777;">
+  Site loaded at: <span id="last-update-time"></span>
+</footer>
+
+<script>
+  const date = new Date();
+  const formattedTime = date.toLocaleTimeString("en-US", {
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit"
+  });
+
+  document.getElementById("last-update-time").textContent = formattedTime;
+</script>
+
+
+
   <script src="script.js"></script>
 </body>
 </html>
