@@ -7,7 +7,7 @@ document.querySelectorAll(".artwork").forEach((section) => {
     trigger: imageWrapper,        // ✅ use the image container itself
     start: "top top",             // ✅ when image hits top of viewport
     endTrigger: section,          // optional: use section to define end
-    end: "bottom center",         // pin until section ends
+    end: "bottom bottom",         // pin until section ends
     pin: imageWrapper,
     pinSpacing: true,
     scrub: true
