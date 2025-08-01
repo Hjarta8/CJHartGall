@@ -6,7 +6,7 @@ document.querySelectorAll(".artwork").forEach((section) => {
   ScrollTrigger.create({
     trigger: section,
     start: "top top",
-    end: "bottom bottom",
+    end: "bottom top",
     pin: image,
     pinSpacing: true,
     scrub: true
